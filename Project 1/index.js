@@ -35,6 +35,7 @@ const updateAge = () => {
     const hour = Math.floor(dateDiff / (1000 * 60 * 60)) % 24;
     const minute = Math.floor(dateDiff / (1000 * 60)) % 60;
     const second = Math.floor(dateDiff / 1000) % 60;
+    
     yearEl.innerHTML = year;
     monthEl.innerHTML = month;
     dayEl.innerHTML = day;
