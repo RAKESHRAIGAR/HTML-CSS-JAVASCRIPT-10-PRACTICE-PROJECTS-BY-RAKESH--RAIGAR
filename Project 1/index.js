@@ -49,7 +49,15 @@ const updateAge = () => {
 const setDOBHandler = () => {
 const dateString = dobInputEl.value;
 dateOfBirth = dateString ? new Date(dateString) : null;
+const year = localStorage.getItem("year");
+const month = localStorage.getItem("month");
+const day = localStorage.getItem("day");
+
 if(dateOfBirth){
+
+    localStorage.setItem("year", dateOfBirth.getFullYear());
+    localStorage.setItem("month", dateOfBirth.getMonth());
+    localStorage.setItem("day", dateOfBirth.getDay());
     initialTextEl.classList.add("hide");
     afterDOBBtnTextEl.classList.remove("hide");
   
