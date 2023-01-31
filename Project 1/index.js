@@ -14,7 +14,9 @@ const hourEl = document.getElementById("hour");
 const minuteEl = document.getElementById("minute");
 const secondEl = document.getElementById("second");
 
-
+const makeTwoDigitNumber = (str) =>{
+    return number > 9 ? number :'0${number}';
+}
 
 const toggleDateOfBirthSelector = () => {
     if(isDOBOpen){
@@ -36,21 +38,22 @@ const updateAge = () => {
     const minute = Math.floor(dateDiff / (1000 * 60)) % 60;
     const second = Math.floor(dateDiff / 1000) % 60;
     
-    yearEl.innerHTML = year;
-    monthEl.innerHTML = month;
-    dayEl.innerHTML = day;
-    hourEl.innerHTML = hour;
-    minuteEl.innerHTML = minute;
-    secondEl.innerHTML = second;
+    yearEl.innerHTML =makeTwoDigitNumber(year) ;
+    monthEl.innerHTML =makeTwoDigitNumber( month);
+    dayEl.innerHTML =  makeTwoDigitNumber(day);
+    hourEl.innerHTML =makeTwoDigitNumber(hour);
+    minuteEl.innerHTML =makeTwoDigitNumber(minute);
+    secondEl.innerHTML =makeTwoDigitNumber(second);
  };
 
 const setDOBHandler = () => {
 const dateString = dobInputEl.value;
-dateOfBirth = new Date(dateString);
+dateOfBirth = dateString ? new Date(dateString) : null;
 if(dateOfBirth){
     initialTextEl.classList.add("hide");
     afterDOBBtnTextEl.classList.remove("hide");
-    updateAge();
+  
+    setInterval(()=>updateAge(), 1000);
 }else{
     afterDOBBtnTextEl.classList.add("hide");
     initialTextEl.classList.remove("hide");
