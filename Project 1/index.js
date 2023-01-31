@@ -51,13 +51,17 @@ const dateString = dobInputEl.value;
 dateOfBirth = dateString ? new Date(dateString) : null;
 const year = localStorage.getItem("year");
 const month = localStorage.getItem("month");
-const day = localStorage.getItem("day");
+const date = localStorage.getItem("date");
+if(year && month && date ){
+    dateOfBirth = new Date(year, month, date);
+}
+
 
 if(dateOfBirth){
 
     localStorage.setItem("year", dateOfBirth.getFullYear());
     localStorage.setItem("month", dateOfBirth.getMonth());
-    localStorage.setItem("day", dateOfBirth.getDay());
+    localStorage.setItem("date", dateOfBirth.getDate());
     initialTextEl.classList.add("hide");
     afterDOBBtnTextEl.classList.remove("hide");
   
