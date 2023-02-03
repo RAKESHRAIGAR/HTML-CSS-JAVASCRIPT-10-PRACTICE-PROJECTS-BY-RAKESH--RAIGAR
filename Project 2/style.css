@@ -52,7 +52,12 @@
     background:rgba(13, 178, 233, 0.979);
   }
   /* for card */
+  .profileContainer{
+    background:green;
+    width: 100%;
+  }
   .profile-box{
+    margin: auto;
     width: 90%;
     max-width: 78rem;
     padding: 4rem 2rem;
