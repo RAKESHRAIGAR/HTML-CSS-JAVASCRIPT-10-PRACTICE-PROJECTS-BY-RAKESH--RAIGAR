@@ -85,8 +85,26 @@ const checkAnswer = (event) => {
     const userAnswer = +formData.get("answer");
     if(userAnswer == storedAnswer){
         score += 1;
+        Toastify({
+            text: `You are wrong and your score is ${score}`,
+            className: "info",
+            gravity:"bottom",
+            position:"center",
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            }
+          }).showToast();
     }else{
         score -=1;
+        Toastify({
+            text: `You are wrong and your score is ${score}`,
+            className: "info",
+            gravity:"bottom",
+            position:"center",
+            style: {
+              background: "linear-gradient(to right, #e33217, #ff001e)",
+            }
+          }).showToast();
     }
     scoreEl.innerText = score;
     localStorage.setItem("score",score);
