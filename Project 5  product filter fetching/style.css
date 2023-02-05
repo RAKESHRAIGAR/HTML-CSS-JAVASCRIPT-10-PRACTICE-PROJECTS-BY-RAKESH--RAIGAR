@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+:root{
+    --primary:#8f00ff;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: "Poppins",sans-serif ;
+}
+.product_contianer{
+
+}
+.product_card{
+    width: ;
+}
