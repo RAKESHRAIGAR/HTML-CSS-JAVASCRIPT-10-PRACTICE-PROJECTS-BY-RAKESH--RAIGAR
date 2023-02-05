@@ -1,10 +1,16 @@
-
-
-
-
-
-
-
+// Part 1
+// Create a Math question
+// Math question will have a random generated
+// Question Type Multiplicatin question  with random number range 1-10
+// Answer will be the product of the random number range and the random number range
+// User will have to answer question
+// On submit  answer answer will be compared with random generated answer
+// If answer will be correct than score will be incremented
+// If answer will be wrong than score will be decremented
+// Generate 4 Types of question
+// For Subtract first number should be greater than second number also for Divide
+// Store the score in local storage and display the score on the screen
+// Give Feedback to user using toast
 
 
 const questionEl = document.getElementById("question");
