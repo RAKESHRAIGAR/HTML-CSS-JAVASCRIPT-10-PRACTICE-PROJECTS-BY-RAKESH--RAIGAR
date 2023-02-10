@@ -55,6 +55,18 @@ height: 80px;
 #color4{
     background-color:blue;
 }
+.colorBox:hover p {
+ display: inline-block;
+}
+.colorBox p {
+background-color: rgb(223 223 223);
+width: 150px;
+padding: 10px;
+text-align: end;
+margin-top: 10px;
+font-size: 24px;
+display: none;
+}
 
 /* Responsive  */
 
