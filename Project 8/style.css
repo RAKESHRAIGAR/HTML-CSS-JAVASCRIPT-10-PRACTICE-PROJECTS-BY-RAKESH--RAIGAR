@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+:root {
+  --primary: #3a3a3a;
+  --primary-dark: #302d2d;
+  --primary-green: #008104;
+  --primary-red: #ff0000;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: var(--primary);
+}
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.box {
+  width: 450px;
+  height: 600px;
+  padding: 20px;
+  background-color: var(--primary-dark);
+  color: white;
+}
+p {
+  font-size: 14px;
+}
+h1 {
+  font-weight: 500;
+  font-size: 32px;
+}
+h2 {
+  font-weight: 400;
+  font-size: 24px;
+}
+h3 {
+  font-weight: 400;
+  font-size: 20px;
+}
+.box_upper,
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.balance {
+  margin-top: 20px;
+}
+.transaction_container {
+  margin-top: 20px;
+}
+.transactions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.transaction {
+  display: flex;
+
+  background-color: white;
+  color: black;
+  flex-direction: column;
+}
+.transaction .left {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  align-items: center;
+}
+.content {
+  display: flex;
+}
+.lower {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  display: none;
+}
+.lower img {
+  height: 20px;
+}
+.showTransaction {
+  display: flex;
+}
+.status {
+  background-color: var(--primary-green);
+  min-height: 40px;
+  min-width: 40px;
+  display: grid;
+  place-items: center;
+  color: white;
+}
+.credit {
+  background-color: var(--primary-green);
+}
+.debit {
+  background-color: var(--primary-red);
+}
+.transection_from {
+  width: 410px;
+  position: absolute;
+  color: black;
+  padding: 10px;
+
+  background-color: white;
+  display: grid;
+  place-items: center;
+  margin-top: 30px;
+  height: auto;
+}
+.transection_from h3 {
+  margin-bottom: 90px;
+}
+.form_control {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.form_control:first-child {
+  flex: 2;
+}
+.inputs {
+  display: flex;
+  gap: 10px;
+}
+form input {
+  padding: 10px 15px;
+  outline: 1px solid transparent;
+  border: 1px solid black;
+  width: 100%;
+}
+form input:focus-visible {
+  outline: 1px solid var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+}
+.buttons_container {
+  display: flex;
+  margin-top: 10px;
+}
+.buttons_container button {
+  width: 100%;
+  height: 45px;
+  color: white;
+  border: none;
+  opacity: 0.9;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.buttons_container button:hover {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+#earnBtn {
+  background-color: var(--primary-green);
+}
+#expBtn {
+  background-color: var(--primary-red);
+}
+@media (max-width: 500px) {
+  .box {
+    width: 95%;
+  }
+  .transection_from {
+    width: 90%;
+  }
+}
+@media (max-width: 350px) {
+  .inputs {
+    width: 95%;
+  }
+  .form_control {
+    width: 40%;
+  }
+}
